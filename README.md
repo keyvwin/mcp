@@ -15,6 +15,8 @@ Prices are read from the Store on 2026-10-10; the Pricing tab of each Actor is t
 
 ## Install
 
+Listed in the [official MCP registry](https://registry.modelcontextprotocol.io/v0/servers?search=b2bsearch) as `io.github.b2bsearch/mcp`.
+
 You need an [Apify account](https://apify.com) and a token from Console → Settings → Integrations. New accounts come with free monthly credit.
 
 **Claude Code**
