@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.b2bsearch/mcp",
+  "description": "B2B contact enrichment and account signals: new hires, company email format, lookalike companies, decision makers, emails by LinkedIn URL, ICP people search. Pay per result via the user's Apify token.",
+  "repository": { "url": "https://github.com/b2bsearch/mcp", "source": "github" },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "npm",
+      "identifier": "@b2bsearch/mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environment_variables": [
+        { "name": "APIFY_TOKEN", "description": "Apify API token (console.apify.com → Settings → Integrations)", "is_required": true, "is_secret": true }
+      ]
+    }
+  ]
+}
