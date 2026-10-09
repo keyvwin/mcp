@@ -37,6 +37,8 @@ claude mcp add --scope user b2bsearch -e APIFY_TOKEN=<your token> -- npx -y @b2b
 }
 ```
 
+**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.0.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
+
 **From source**
 
 ```bash

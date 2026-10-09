@@ -1,0 +1,40 @@
+{
+  "manifest_version": "0.2",
+  "name": "b2bsearch-mcp",
+  "display_name": "b2bsearch: B2B contacts and account signals",
+  "version": "0.1.0",
+  "description": "New hires, company email format, lookalike companies, decision makers, emails by LinkedIn URL and people search, pay per result on Apify.",
+  "long_description": "Six task-named tools over the b2bsearch Actors on Apify: find_new_hires, company_email_format, find_lookalike_companies, find_decision_makers, find_email_by_linkedin_url, search_people. Every call takes a spend cap; misses are free rows. You bring your own Apify token.",
+  "author": { "name": "B2B Enrich Search", "url": "https://github.com/b2bsearch" },
+  "repository": { "type": "git", "url": "https://github.com/b2bsearch/mcp" },
+  "homepage": "https://github.com/b2bsearch/mcp",
+  "license": "MIT",
+  "keywords": ["apify", "b2b", "lead-generation", "contact-enrichment", "new-hires", "lookalike", "decision-makers"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/index.js"],
+      "env": { "APIFY_TOKEN": "${user_config.apify_token}" }
+    }
+  },
+  "tools": [
+    { "name": "find_new_hires", "description": "Who recently joined the given companies, with the employer they came from" },
+    { "name": "company_email_format", "description": "A company's work email convention from addresses on record" },
+    { "name": "find_lookalike_companies", "description": "Companies similar to example companies, with explicit match criteria" },
+    { "name": "find_decision_makers", "description": "Founders, C-level, VPs and directors at company domains" },
+    { "name": "find_email_by_linkedin_url", "description": "The email on record for LinkedIn profile URLs" },
+    { "name": "search_people", "description": "People by title, seniority, country and employer; free count and market modes" }
+  ],
+  "user_config": {
+    "apify_token": {
+      "type": "string",
+      "title": "Apify API token",
+      "description": "From Apify Console → Settings → Integrations. Runs are billed to this account, pay per result.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": { "runtimes": { "node": ">=18" } }
+}
