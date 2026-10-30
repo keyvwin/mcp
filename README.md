@@ -17,36 +17,40 @@ Prices are read from the Store on 2026-10-10; the Pricing tab of each Actor is t
 
 Listed in the [official MCP registry](https://registry.modelcontextprotocol.io/v0/servers?search=b2bsearch) as `io.github.b2bsearch/mcp`.
 
-You need an [Apify account](https://apify.com) and a token from Console → Settings → Integrations. New accounts come with free monthly credit.
+You need an [Apify account](https://apify.com) and a token from Console → Settings → Integrations.
 
-**Claude Code**
+**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.0.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
+
+**Claude Code, Cursor, Windsurf, any stdio client**: build once, then point the client at the build.
 
 ```bash
-claude mcp add --scope user b2bsearch -e APIFY_TOKEN=<your token> -- npx -y @b2bsearch/mcp
+git clone https://github.com/b2bsearch/mcp ~/b2bsearch-mcp && cd ~/b2bsearch-mcp && npm install && npm run build
+claude mcp add --scope user b2bsearch -e APIFY_TOKEN=<your token> -- node ~/b2bsearch-mcp/dist/index.js
 ```
 
-**Claude Desktop, Cursor, Windsurf, any stdio client** (`claude_desktop_config.json`, `.cursor/mcp.json`):
+For `claude_desktop_config.json` or `.cursor/mcp.json`, use the absolute path of `dist/index.js`:
 
 ```json
 {
   "mcpServers": {
     "b2bsearch": {
-      "command": "npx",
-      "args": ["-y", "@b2bsearch/mcp"],
+      "command": "node",
+      "args": ["/Users/you/b2bsearch-mcp/dist/index.js"],
       "env": { "APIFY_TOKEN": "<your token>" }
     }
   }
 }
 ```
 
-**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.0.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
+**No install**: the same six Actors through the Apify hosted MCP server, with Apify's generic run tools instead of the task-named ones above. Clients with OAuth (Claude, Cursor, VS Code) sign in to Apify; others pass the token as a Bearer header.
 
-**From source**
-
-```bash
-git clone https://github.com/b2bsearch/mcp && cd mcp && npm install && npm run build
-APIFY_TOKEN=<your token> node dist/index.js
 ```
+https://mcp.apify.com/?tools=b2bsearch/new-hires-finder,b2bsearch/company-email-format-finder,b2bsearch/lookalike-company-finder,b2bsearch/domain-to-decision-makers,b2bsearch/linkedin-email-finder,b2bsearch/people-database-search
+```
+
+### Free Apify plan
+
+Free accounts get the same rows with three limits: 500 rows a month per Actor (misses count), up to 100 rows per run, and up to 25 rows per run for `search_people`, because every call from this server is an API call. Counts (`mode: "count"`, `"market"`) stay free. Any paid Apify plan lifts the limits.
 
 ## What a call looks like
 
