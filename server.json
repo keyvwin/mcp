@@ -8,19 +8,35 @@
     "source": "github"
   },
   "websiteUrl": "https://apify.com/b2bsearch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/b2bsearch/mcp/releases/download/v0.1.0/b2bsearch-mcp-0.1.0.mcpb",
-      "fileSha256": "388234849892cfe1a112e4df099269b458d0406e9ed79dfaf1c1622a1cf0e0df",
+      "identifier": "https://github.com/b2bsearch/mcp/releases/download/v0.1.1/b2bsearch-mcp-0.1.1.mcpb",
+      "fileSha256": "2b6ee19288276e71341741623913ee58483061900cd59d07fb685a2535209a50",
       "transport": {
         "type": "stdio"
       },
       "environmentVariables": [
         {
           "name": "APIFY_TOKEN",
-          "description": "Apify API token (Console \u2192 Settings \u2192 Integrations)",
+          "description": "Apify API token (Console → Settings → Integrations)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    },
+    {
+      "registryType": "npm",
+      "identifier": "@b2bsearch/mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "APIFY_TOKEN",
+          "description": "Apify API token (Console → Settings → Integrations)",
           "isRequired": true,
           "isSecret": true
         }

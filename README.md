@@ -19,7 +19,7 @@ Listed in the [official MCP registry](https://registry.modelcontextprotocol.io/v
 
 You need an [Apify account](https://apify.com) and a token from Console → Settings → Integrations.
 
-**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.0.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
+**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.1.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
 
 **Claude Code, Cursor, Windsurf, any stdio client**: build once, then point the client at the build.
 
