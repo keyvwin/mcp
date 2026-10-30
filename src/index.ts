@@ -7,11 +7,11 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { ApifyClient } from 'apify-client';
 import { z } from 'zod';
 
+// Without a token the server still starts and lists its tools (directories and
+// catalog builders probe it that way); a tool call then fails with the hint.
+const TOKEN_HINT = 'APIFY_TOKEN is not set. Create one at https://console.apify.com/settings/integrations';
 const token = process.env.APIFY_TOKEN;
-if (!token) {
-  console.error('APIFY_TOKEN is not set. Create one at https://console.apify.com/settings/integrations');
-  process.exit(1);
-}
+if (!token) console.error(`${TOKEN_HINT}; tools are listed, calls will fail until it is set.`);
 const apify = new ApifyClient({ token, userAgentSuffix: 'b2bsearch-mcp/0.1.0' } as any);
 
 const DEFAULT_CAP_USD = 5;
@@ -26,6 +26,7 @@ const cap = z.number().positive().max(500).optional().describe(`Maximum spend fo
 type Row = Record<string, unknown>;
 
 async function runActor(actorId: string, input: Row, maxChargeUsd = DEFAULT_CAP_USD) {
+  if (!token) throw new Error(TOKEN_HINT);
   const run = await apify.actor(actorId).call(input, {
     maxTotalChargeUsd: maxChargeUsd,
     waitSecs: DEFAULT_WAIT_SECS,
