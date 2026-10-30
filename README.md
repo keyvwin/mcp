@@ -86,7 +86,7 @@ Every row carries `_status`. `found` rows are the paid results; everything else 
 - **ICP expansion**: `find_lookalike_companies` from your 10 best customers → `find_decision_makers` on the result → emails.
 - **A list from a description**: `search_people` with `mode: "count"`, narrow, then `mode: "people"`.
 
-The same workflows, as step-by-step guides for Claude Code and n8n, and as agent skills, live in [b2bsearch/skills](https://github.com/b2bsearch/skills).
+The same workflows as n8n templates with step-by-step guides live in [b2bsearch/workflows](https://github.com/b2bsearch/workflows), and as agent skills in [b2bsearch/skills](https://github.com/b2bsearch/skills). Job postings, hiring companies and leads with phones are in [b2bsearch-plugin](https://github.com/b2bsearch/b2bsearch-plugin).
 
 ## Guardrails built in
 
