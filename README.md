@@ -21,26 +21,27 @@ You need an [Apify account](https://apify.com) and a token from Console → Sett
 
 **Claude Desktop, one click**: download `b2bsearch-mcp-0.1.1.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
 
-**Claude Code, Cursor, Windsurf, any stdio client**: build once, then point the client at the build.
+**Claude Code**
 
 ```bash
-git clone https://github.com/b2bsearch/mcp ~/b2bsearch-mcp && cd ~/b2bsearch-mcp && npm install && npm run build
-claude mcp add --scope user b2bsearch -e APIFY_TOKEN=<your token> -- node ~/b2bsearch-mcp/dist/index.js
+claude mcp add --scope user b2bsearch -e APIFY_TOKEN=<your token> -- npx -y @b2bsearch/mcp
 ```
 
-For `claude_desktop_config.json` or `.cursor/mcp.json`, use the absolute path of `dist/index.js`:
+**Cursor, Windsurf, Claude Desktop, any stdio client** (`.cursor/mcp.json`, `claude_desktop_config.json`):
 
 ```json
 {
   "mcpServers": {
     "b2bsearch": {
-      "command": "node",
-      "args": ["/Users/you/b2bsearch-mcp/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "@b2bsearch/mcp"],
       "env": { "APIFY_TOKEN": "<your token>" }
     }
   }
 }
 ```
+
+**From source**: `git clone https://github.com/b2bsearch/mcp && cd mcp && npm install && npm run build`, then use `node /absolute/path/mcp/dist/index.js` as the command.
 
 **No install**: the same six Actors through the Apify hosted MCP server, with Apify's generic run tools instead of the task-named ones above. Clients with OAuth (Claude, Cursor, VS Code) sign in to Apify; others pass the token as a Bearer header.
 
