@@ -5,7 +5,7 @@
   "version": "0.1.3",
   "description": "New hires, company email format, lookalike companies, decision makers, emails by LinkedIn URL and people search, pay per result on Apify.",
   "long_description": "Six task-named tools over the b2bsearch Actors on Apify: find_new_hires, company_email_format, find_lookalike_companies, find_decision_makers, find_email_by_linkedin_url, search_people. Every call takes a spend cap; misses are free rows. You bring your own Apify token.",
-  "author": { "name": "B2B Enrich Search", "url": "https://github.com/keyvwin" },
+  "author": { "name": "B2B Enrich Search", "url": "https://apify.com/b2bsearch" },
   "repository": { "type": "git", "url": "https://github.com/keyvwin/mcp" },
   "homepage": "https://github.com/keyvwin/mcp",
   "license": "MIT",
