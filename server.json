@@ -4,15 +4,14 @@
   "title": "b2bsearch: B2B contacts and account signals",
   "description": "B2B contacts and account signals on Apify: new hires, email format, lookalikes, decision makers.",
   "repository": {
-    "url": "https://github.com/b2bsearch/mcp",
+    "url": "https://github.com/keyvwin/mcp",
     "source": "github"
   },
-  "websiteUrl": "https://apify.com/b2bsearch",
   "version": "0.1.2",
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/b2bsearch/mcp/releases/download/v0.1.2/b2bsearch-mcp-0.1.2.mcpb",
+      "identifier": "https://github.com/keyvwin/mcp/releases/download/v0.1.2/b2bsearch-mcp-0.1.2.mcpb",
       "fileSha256": "4d837026c87b042721d9f05535d75406016b5a3c4b5763afbf296a424d9f7b12",
       "transport": {
         "type": "stdio"

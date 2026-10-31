@@ -33,9 +33,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/b2bsearch/mcp"
+    "url": "https://github.com/keyvwin/mcp"
   },
-  "homepage": "https://github.com/b2bsearch/mcp",
+  "homepage": "https://github.com/keyvwin/mcp",
   "engines": {
     "node": ">=18"
   },

@@ -1,6 +1,5 @@
 # b2bsearch MCP server
 
-An MCP server with six task-named tools for B2B prospecting and account signals, backed by the [`b2bsearch` Actors on Apify](https://apify.com/b2bsearch): a database of 800M+ professional profiles and 115M companies, read without scraping, cookies or a LinkedIn login. You bring your own Apify token and pay per result; a miss is a free row.
 
 | Tool | What it answers | Price |
 |---|---|---|
@@ -19,7 +18,7 @@ Listed in the [official MCP registry](https://registry.modelcontextprotocol.io/v
 
 You need an [Apify account](https://apify.com) and a token from Console → Settings → Integrations.
 
-**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.2.mcpb` from the [latest release](https://github.com/b2bsearch/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
+**Claude Desktop, one click**: download `b2bsearch-mcp-0.1.2.mcpb` from the [latest release](https://github.com/keyvwin/mcp/releases/latest), open it with Claude Desktop (Settings → Extensions), paste your Apify token when asked.
 
 **Claude Code**
 
@@ -41,7 +40,7 @@ claude mcp add --scope user b2bsearch -e APIFY_TOKEN=<your token> -- npx -y @b2b
 }
 ```
 
-**From source**: `git clone https://github.com/b2bsearch/mcp && cd mcp && npm install && npm run build`, then use `node /absolute/path/mcp/dist/index.js` as the command.
+**From source**: `git clone https://github.com/keyvwin/mcp && cd mcp && npm install && npm run build`, then use `node /absolute/path/mcp/dist/index.js` as the command.
 
 **No install**: the same six Actors through the Apify hosted MCP server, with Apify's generic run tools instead of the task-named ones above. Clients with OAuth (Claude, Cursor, VS Code) sign in to Apify; others pass the token as a Bearer header.
 
@@ -87,7 +86,7 @@ Every row carries `_status`. `found` rows are the paid results; everything else 
 - **ICP expansion**: `find_lookalike_companies` from your 10 best customers → `find_decision_makers` on the result → emails.
 - **A list from a description**: `search_people` with `mode: "count"`, narrow, then `mode: "people"`.
 
-The same workflows as n8n templates with step-by-step guides live in [b2bsearch/workflows](https://github.com/b2bsearch/workflows), and as agent skills in [b2bsearch/skills](https://github.com/b2bsearch/skills). Job postings, hiring companies and leads with phones are in [b2bsearch-plugin](https://github.com/b2bsearch/b2bsearch-plugin).
+The same workflows as n8n templates with step-by-step guides live in [b2bsearch/workflows](https://github.com/keyvwin/workflows), and as agent skills in [b2bsearch/skills](https://github.com/keyvwin/skills). Job postings, hiring companies and leads with phones are in [b2bsearch-plugin](https://github.com/keyvwin/b2bsearch-plugin).
 
 ## Guardrails built in
 
@@ -108,7 +107,7 @@ npm run build
 APIFY_TOKEN=<token> npm run smoke   # lists tools, runs one $0.02 call and one free count
 ```
 
-Issues and requests: [github.com/b2bsearch/mcp/issues](https://github.com/b2bsearch/mcp/issues), or the Issues tab of the Actor on Apify.
+Issues and requests: [github.com/keyvwin/mcp/issues](https://github.com/keyvwin/mcp/issues), or the Issues tab of the Actor on Apify.
 
 ## License
 
