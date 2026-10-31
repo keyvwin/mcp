@@ -1,6 +1,6 @@
 {
   "name": "@b2bsearch/mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for B2B contact enrichment and account signals: new hires, company email format, lookalike companies, decision makers, emails by LinkedIn URL and ICP people search, backed by the b2bsearch Actors on Apify (pay per result, no scraping).",
   "type": "module",
   "bin": {

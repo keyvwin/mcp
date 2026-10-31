@@ -8,12 +8,12 @@
     "source": "github"
   },
   "websiteUrl": "https://apify.com/b2bsearch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/b2bsearch/mcp/releases/download/v0.1.1/b2bsearch-mcp-0.1.1.mcpb",
-      "fileSha256": "2b6ee19288276e71341741623913ee58483061900cd59d07fb685a2535209a50",
+      "identifier": "https://github.com/b2bsearch/mcp/releases/download/v0.1.2/b2bsearch-mcp-0.1.2.mcpb",
+      "fileSha256": "4d837026c87b042721d9f05535d75406016b5a3c4b5763afbf296a424d9f7b12",
       "transport": {
         "type": "stdio"
       },
@@ -29,7 +29,7 @@
     {
       "registryType": "npm",
       "identifier": "@b2bsearch/mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       },
