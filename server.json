@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.b2bsearch/mcp",
+  "name": "io.github.keyvwin/mcp",
   "title": "b2bsearch: B2B contacts and account signals",
   "description": "B2B contacts and account signals on Apify: new hires, email format, lookalikes, decision makers.",
   "repository": {
     "url": "https://github.com/keyvwin/mcp",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/keyvwin/mcp/releases/download/v0.1.2/b2bsearch-mcp-0.1.2.mcpb",
-      "fileSha256": "4d837026c87b042721d9f05535d75406016b5a3c4b5763afbf296a424d9f7b12",
+      "identifier": "https://github.com/keyvwin/mcp/releases/download/v0.1.3/b2bsearch-mcp-0.1.3.mcpb",
+      "fileSha256": "69783baf6c3b02c6800e04c9676ea9fe77c3acb77881393b36bca84f6770500a",
       "transport": {
         "type": "stdio"
       },
@@ -28,7 +28,7 @@
     {
       "registryType": "npm",
       "identifier": "@b2bsearch/mcp",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "transport": {
         "type": "stdio"
       },

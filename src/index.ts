@@ -12,7 +12,7 @@ import { z } from 'zod';
 const TOKEN_HINT = 'APIFY_TOKEN is not set. Create one at https://console.apify.com/settings/integrations';
 const token = process.env.APIFY_TOKEN;
 if (!token) console.error(`${TOKEN_HINT}; tools are listed, calls will fail until it is set.`);
-const apify = new ApifyClient({ token, userAgentSuffix: 'b2bsearch-mcp/0.1.2' } as any);
+const apify = new ApifyClient({ token, userAgentSuffix: 'b2bsearch-mcp/0.1.3' } as any);
 
 const DEFAULT_CAP_USD = 5;
 const DEFAULT_WAIT_SECS = 300;
@@ -54,7 +54,7 @@ async function runActor(actorId: string, input: Row, maxChargeUsd = DEFAULT_CAP_
   return { content: [{ type: 'text' as const, text: JSON.stringify({ summary, rows }, null, 0) }] };
 }
 
-const server = new McpServer({ name: 'b2bsearch', version: '0.1.2' });
+const server = new McpServer({ name: 'b2bsearch', version: '0.1.3' });
 
 server.registerTool(
   'find_new_hires',

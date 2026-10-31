@@ -1,6 +1,6 @@
 {
   "name": "@b2bsearch/mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "MCP server for B2B contact enrichment and account signals: new hires, company email format, lookalike companies, decision makers, emails by LinkedIn URL and ICP people search, backed by the b2bsearch Actors on Apify (pay per result, no scraping).",
   "type": "module",
   "bin": {
@@ -48,5 +48,5 @@
     "typescript": "5.9.3",
     "@types/node": "24.19.2"
   },
-  "mcpName": "io.github.b2bsearch/mcp"
+  "mcpName": "io.github.keyvwin/mcp"
 }
